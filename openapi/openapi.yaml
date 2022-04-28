@@ -43,6 +43,8 @@ paths:
   "/comments/{comment_id}":
     $ref: "paths/comment_{comment_id}.yaml"
 
+  "/news?offset={offset}&limit={limit}":
+    $ref: "paths/news.yaml"
   "/news/{user_id}":
     $ref: "paths/news_{user_id}.yaml"
   "/news/{news_id}":

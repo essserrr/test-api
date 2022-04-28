@@ -1,0 +1,11 @@
+allOf:
+  - $ref: ./Response-Paginated.yaml
+  - type: object
+    description: Comment list response
+    properties:
+      data:
+        properties:
+          data:
+            type: array
+            items:
+              $ref: ../schemas/News.yaml
