@@ -2,7 +2,7 @@ post:
   tags:
     - User
   summary: Add user by user username
-  operationId: getUser
+  operationId: signUp
   parameters:
     - name: user_username
       in: path

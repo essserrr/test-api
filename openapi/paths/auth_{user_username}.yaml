@@ -1,0 +1,54 @@
+get:
+  tags:
+    - Auth
+  summary: Login by user username
+  operationId: login
+  parameters:
+    - name: user_username
+      in: path
+      description: The user_username that needs to logged in
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Auth.yaml
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/User.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - Auth
+  summary: Logout user by user username
+  operationId: logout
+  parameters:
+    - name: user_username
+      in: path
+      description: The user_username that needs to logged out
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Auth.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

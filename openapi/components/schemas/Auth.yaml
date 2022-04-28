@@ -1,0 +1,7 @@
+type: object
+title: Auth
+properties:
+  password:
+    type: string
+    examples:
+      - User password

@@ -32,3 +32,6 @@ paths:
     $ref: "paths/author.yaml"
   "/authors/{author_id}":
     $ref: "paths/author_{author_id}.yaml"
+
+  "/auth/{user_username}":
+    $ref: "paths/auth_{user_username}.yaml"
