@@ -1,0 +1,40 @@
+type: object
+title: News
+properties:
+  id:
+    $ref: ./entities/BigintId.yaml
+
+  title:
+    type: string
+    examples:
+      - News title
+
+  content:
+    type: string
+    examples:
+      - News content
+
+  mainImage:
+    type: string
+
+  auxImages:
+    type: array
+    items:
+      type: string
+
+  tags:
+    type: array
+    items:
+      $ref: "./Tag.yaml"
+
+  category:
+    type: array
+    items:
+      - $ref: "./NewsCategory.yaml"
+
+  author:
+    $ref: "./NewsAuthor.yaml"
+
+  createdAt:
+    type: integer
+    minimum: 0

@@ -9,7 +9,7 @@ delete:
       description: The comment_id that needs to be removed
       required: true
       schema:
-        type: string
+        $ref: ../components/schemas/entities/BigintId.yaml
 
   responses:
     "200":

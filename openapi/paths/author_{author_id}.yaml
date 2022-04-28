@@ -32,7 +32,7 @@ post:
       description: The author_id that needs to be added
       required: true
       schema:
-        type: string
+        $ref: ../components/schemas/entities/BigintId.yaml
   requestBody:
     content:
       application/json:

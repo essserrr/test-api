@@ -19,7 +19,7 @@ properties:
   username:
     type: string
     examples:
-      - User username
+      - username
   createdAt:
     type: integer
     minimum: 0

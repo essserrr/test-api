@@ -1,12 +1,12 @@
 post:
   tags:
-    - Comment
-  summary: Add comment for news_id
-  operationId: addComment
+    - News
+  summary: Add news by user id
+  operationId: addNews
   parameters:
-    - name: news_id
+    - name: user_id
       in: path
-      description: The news_id for that comment needs to be added
+      description: The user_id that adds news
       required: true
       schema:
         $ref: ../components/schemas/entities/BigintId.yaml
@@ -14,7 +14,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Comment-POST.yaml
+          $ref: ../components/schemas/News-POST.yaml
 
   responses:
     "200":
@@ -22,6 +22,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Comment.yaml
+            $ref: ../components/responses/News.yaml
     "400":
       $ref: ../components/responses/Error.yaml

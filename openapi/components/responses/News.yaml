@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ./Response.yaml
+  - type: object
+    description: News response
+    properties:
+      data:
+        $ref: ../schemas/News.yaml

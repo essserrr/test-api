@@ -42,3 +42,6 @@ paths:
     $ref: "paths/comment_{news_id}.yaml"
   "/comments/{comment_id}":
     $ref: "paths/comment_{comment_id}.yaml"
+
+  "/news/{user_id}":
+    $ref: "paths/news_{user_id}.yaml"

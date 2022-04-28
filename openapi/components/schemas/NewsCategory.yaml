@@ -1,0 +1,7 @@
+allOf:
+  - $ref: "./Category.yaml"
+  - type: object
+    properties:
+      level:
+        type: integer
+        minimum: 0
