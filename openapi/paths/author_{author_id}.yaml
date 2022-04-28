@@ -9,7 +9,7 @@ get:
       description: The author_id that needs to be fetched
       required: true
       schema:
-        $ref: ../components/schemas/Id.yaml
+        $ref: ../components/schemas/entities/Id.yaml
 
   responses:
     "200":
@@ -60,7 +60,7 @@ patch:
       description: The author_id that needs to be patched
       required: true
       schema:
-        $ref: ../components/schemas/Id.yaml
+        $ref: ../components/schemas/entities/Id.yaml
   requestBody:
     content:
       application/json:
@@ -90,7 +90,7 @@ delete:
       description: The author_id that needs to be removed
       required: true
       schema:
-        $ref: ../components/schemas/Id.yaml
+        $ref: ../components/schemas/entities/Id.yaml
 
   responses:
     "200":

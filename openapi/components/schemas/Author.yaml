@@ -2,6 +2,6 @@ type: object
 title: Author
 properties:
   uid:
-    $ref: ./Id.yaml
+    $ref: ./entities/Id.yaml
   description:
-    $ref: ./Author-Description.yaml
+    $ref: ./entities/Author-Description.yaml

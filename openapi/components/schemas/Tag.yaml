@@ -2,7 +2,7 @@ type: object
 title: Tag
 properties:
   id:
-    $ref: ./Id.yaml
+    $ref: ./entities/Id.yaml
   name:
     type: string
     examples:

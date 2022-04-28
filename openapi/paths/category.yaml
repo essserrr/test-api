@@ -8,12 +8,12 @@ get:
       in: query
       required: false
       schema:
-        $ref: ../components/schemas/Offset.yaml
+        $ref: ../components/schemas/entities/Offset.yaml
     - name: limit
       in: query
       required: false
       schema:
-        $ref: ../components/schemas/Limit.yaml
+        $ref: ../components/schemas/entities/Limit.yaml
   responses:
     "200":
       description: OK

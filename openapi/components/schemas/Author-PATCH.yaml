@@ -2,4 +2,4 @@ type: object
 title: Author
 properties:
   description:
-    $ref: ./Author-Description.yaml
+    $ref: ./entities/Author-Description.yaml

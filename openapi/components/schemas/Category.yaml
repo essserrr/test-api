@@ -2,9 +2,9 @@ type: object
 title: Category
 properties:
   id:
-    $ref: ./Id.yaml
+    $ref: ./entities/Id.yaml
   pid:
-    $ref: ./Pid.yaml
+    $ref: ./entities/Pid.yaml
   name:
     type: string
     examples:

@@ -2,7 +2,7 @@ type: object
 title: User
 properties:
   uid:
-    $ref: ./Id.yaml
+    $ref: ./entities/Id.yaml
   name:
     type: string
     examples:

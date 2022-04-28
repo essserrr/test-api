@@ -2,4 +2,4 @@ type: object
 title: Category
 properties:
   pid:
-    $ref: ./Pid.yaml
+    $ref: ./entities/Pid.yaml
