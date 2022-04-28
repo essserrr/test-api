@@ -1,0 +1,22 @@
+post:
+  tags:
+    - Tags
+  summary: Add tag by tag name
+  operationId: getTag
+  parameters:
+    - name: tag_name
+      in: path
+      description: The tag_name that needs to be added
+      required: true
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Tag.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

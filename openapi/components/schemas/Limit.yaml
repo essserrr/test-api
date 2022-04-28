@@ -1,0 +1,4 @@
+oneOf:
+  - type: integer
+  - type: null
+minimum: 0

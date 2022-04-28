@@ -1,0 +1,7 @@
+type: object
+title: Message response
+properties:
+  message:
+    type: string
+    examples:
+      - Some message

@@ -1,0 +1,9 @@
+allOf:
+  - $ref: ./Response-Paginated.yaml
+  - type: object
+    description: Tag list response
+    properties:
+      data:
+        properties:
+          data:
+            $ref: ../schemas/Tag.yaml

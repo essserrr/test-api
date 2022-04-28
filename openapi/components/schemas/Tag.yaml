@@ -1,0 +1,9 @@
+type: object
+title: Tag
+properties:
+  tagId:
+    $ref: ./Id.yaml
+  name:
+    type: string
+    examples:
+      - Tag name

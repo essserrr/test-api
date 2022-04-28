@@ -40,10 +40,10 @@ get:
             email: user@example.com
     "403":
       description: Forbidden
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../components/responses/Error.yaml
     "404":
       description: User not found
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../components/responses/Error.yaml
 put:
   tags:
     - User
@@ -75,7 +75,7 @@ put:
       description: OK
     "400":
       description: Invalid user supplied
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../components/responses/Error.yaml
     "404":
       description: User not found
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../components/responses/Error.yaml

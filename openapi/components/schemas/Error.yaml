@@ -1,0 +1,17 @@
+type: object
+title: Error
+properties:
+  message:
+    type: string
+    examples:
+      - Error message
+  code:
+    type: string
+    enum:
+      - NOT_FOUND
+      - UNKNOWN_ERROR
+      - NAME_CONFLICT
+      - WRONG_REFERENCE
+      - FORBIDDEN
+      - UNAUTHORIZED
+      - WRONG_FORMAT

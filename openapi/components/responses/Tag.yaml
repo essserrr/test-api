@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ./Response.yaml
+  - type: object
+    description: Tag response
+    properties:
+      data:
+        $ref: ../schemas/Tag.yaml

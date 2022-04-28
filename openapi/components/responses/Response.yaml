@@ -1,0 +1,5 @@
+type: object
+title: Response
+properties:
+  data:
+    type: object

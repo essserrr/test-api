@@ -1,0 +1,12 @@
+type: object
+title: Response
+properties:
+  data:
+    type: object
+    properties:
+      data:
+        type: object
+      count:
+        type: integer
+      next:
+        type: boolean
