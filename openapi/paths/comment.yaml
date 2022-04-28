@@ -1,9 +1,15 @@
 get:
   tags:
-    - Category
-  summary: Get all categories
-  operationId: getAllCategories
+    - Comment
+  summary: Get all comments for news with news_id
+  operationId: getAllComments
   parameters:
+    - name: news_id
+      in: path
+      description: The news_id which comments need to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
     - name: offset
       in: query
       required: false
@@ -20,6 +26,6 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Category-Paginated.yaml
+            $ref: ../components/responses/Comment-Paginated.yaml
     "400":
       $ref: ../components/responses/Error.yaml

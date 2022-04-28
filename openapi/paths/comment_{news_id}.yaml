@@ -1,12 +1,12 @@
 post:
   tags:
-    - Category
-  summary: Add category by category name
-  operationId: addCategory
+    - Comment
+  summary: Add comment for news_id
+  operationId: addComment
   parameters:
-    - name: category_name
+    - name: news_id
       in: path
-      description: The category_name that needs to be added
+      description: The news_id for that comment needs to be added
       required: true
       schema:
         type: string
@@ -14,7 +14,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Category-POST.yaml
+          $ref: ../components/schemas/Comment-POST.yaml
 
   responses:
     "200":
@@ -22,6 +22,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Category.yaml
+            $ref: ../components/responses/Comment.yaml
     "400":
       $ref: ../components/responses/Error.yaml

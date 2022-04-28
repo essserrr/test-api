@@ -3,3 +3,4 @@ title: Category
 properties:
   pid:
     $ref: ./entities/Pid.yaml
+    description: parent id

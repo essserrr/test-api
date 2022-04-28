@@ -1,12 +1,12 @@
-post:
+delete:
   tags:
-    - Tag
-  summary: Add tag by tag name
-  operationId: addTag
+    - Comment
+  summary: Delete comment with comment_id
+  operationId: deleteComment
   parameters:
-    - name: tag_name
+    - name: comment_id
       in: path
-      description: The tag_name that needs to be added
+      description: The comment_id that needs to be removed
       required: true
       schema:
         type: string
@@ -17,6 +17,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Tag.yaml
+            $ref: ../components/responses/Message-Response.yaml
     "400":
       $ref: ../components/responses/Error.yaml

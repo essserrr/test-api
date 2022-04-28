@@ -2,7 +2,8 @@ type: object
 title: User
 properties:
   uid:
-    $ref: ./entities/Id.yaml
+    $ref: ./entities/BigintId.yaml
+    description: user id
   name:
     type: string
     examples:

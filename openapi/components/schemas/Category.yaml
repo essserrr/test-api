@@ -5,6 +5,7 @@ properties:
     $ref: ./entities/Id.yaml
   pid:
     $ref: ./entities/Pid.yaml
+    description: parent id
   name:
     type: string
     examples:

@@ -2,7 +2,7 @@ get:
   tags:
     - Author
   summary: Get all authors
-  operationId: getAuthors
+  operationId: getAllAuthors
   parameters:
     - name: offset
       in: query

@@ -1,0 +1,10 @@
+type: object
+title: Comment
+properties:
+  uid:
+    oneOf:
+      - $ref: ./entities/BigintId.yaml
+      - type: null
+    description: user id
+  message:
+    $ref: ./entities/Comment-Message.yaml

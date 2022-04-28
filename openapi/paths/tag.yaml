@@ -2,7 +2,7 @@ get:
   tags:
     - Tag
   summary: Get all tags
-  operationId: getTags
+  operationId: getAllTags
   parameters:
     - name: offset
       in: query
