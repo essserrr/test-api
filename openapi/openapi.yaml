@@ -15,3 +15,10 @@ paths:
     $ref: "paths/tags_{tag_name}.yaml"
   "/tags/{tag_id}":
     $ref: "paths/tags_{tag_id}.yaml"
+
+  "/categories?offset={offset}&limit={limit}":
+    $ref: "paths/category.yaml"
+  "/categories/{category_name}":
+    $ref: "paths/category_{category_name}.yaml"
+  "/categories/{category_id}":
+    $ref: "paths/category_{category_id}.yaml"

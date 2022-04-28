@@ -1,12 +1,12 @@
 get:
   tags:
-    - Tags
-  summary: Get tag by tag id
-  operationId: getTag
+    - Category
+  summary: Get category by category id
+  operationId: getCategory
   parameters:
-    - name: tag_id
+    - name: category_id
       in: path
-      description: The tag_id that needs to be fetched
+      description: The category_id that needs to be fetched
       required: true
       schema:
         $ref: ../components/schemas/Id.yaml
@@ -17,19 +17,19 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Tag.yaml
+            $ref: ../components/responses/Category.yaml
     "400":
       $ref: ../components/responses/Error.yaml
 
 patch:
   tags:
-    - Tags
-  summary: Patch tag by tag id
-  operationId: patchTag
+    - Category
+  summary: Patch category by category id
+  operationId: patchCategory
   parameters:
-    - name: tag_id
+    - name: category_id
       in: path
-      description: The tag_id that needs to be patched
+      description: The category_id that needs to be patched
       required: true
       schema:
         $ref: ../components/schemas/Id.yaml
@@ -37,7 +37,7 @@ patch:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Tag-PATCH.yaml
+          $ref: ../components/schemas/Category-PATCH.yaml
     description: Updated user object
     required: true
 
@@ -47,19 +47,19 @@ patch:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/Tag.yaml
+            $ref: ../components/responses/Category.yaml
     "400":
       $ref: ../components/responses/Error.yaml
 
 delete:
   tags:
-    - Tags
-  summary: Delete tag by tag id
-  operationId: deleteTag
+    - Category
+  summary: Delete category by category id
+  operationId: deleteCategory
   parameters:
-    - name: tag_id
+    - name: category_id
       in: path
-      description: The tag_id that needs to be removed
+      description: The category_id that needs to be removed
       required: true
       schema:
         $ref: ../components/schemas/Id.yaml

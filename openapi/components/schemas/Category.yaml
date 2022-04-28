@@ -1,9 +1,11 @@
 type: object
-title: Tag
+title: Category
 properties:
   id:
     $ref: ./Id.yaml
+  pid:
+    $ref: ./Pid.yaml
   name:
     type: string
     examples:
-      - Tag name
+      - Category name

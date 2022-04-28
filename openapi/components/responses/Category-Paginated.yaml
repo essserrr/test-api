@@ -1,11 +1,11 @@
 allOf:
   - $ref: ./Response-Paginated.yaml
   - type: object
-    description: Tag list response
+    description: Category list response
     properties:
       data:
         properties:
           data:
             type: array
             items:
-              $ref: ../schemas/Tag.yaml
+              $ref: ../schemas/Category.yaml

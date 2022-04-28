@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ./Response.yaml
+  - type: object
+    description: Category response
+    properties:
+      data:
+        $ref: ../schemas/Category.yaml

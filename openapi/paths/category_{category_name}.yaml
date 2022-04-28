@@ -1,0 +1,27 @@
+post:
+  tags:
+    - Category
+  summary: Add category by category name
+  operationId: getCategory
+  parameters:
+    - name: category_name
+      in: path
+      description: The category_name that needs to be added
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Category-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Category.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
