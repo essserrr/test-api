@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Tag
+  summary: Get tag by tag id
+  operationId: getTag
+  parameters:
+    - name: tagId
+      in: path
+      description: The tagId that needs to be fetched
+      required: true
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: OK
+      headers:
+        X-Rate-Limit:
+          description: Calls per hour allowed by the user.
+          schema:
+            type: integer
+            format: int32
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Schema.yaml
+    "400":
+      $ref: ../components/responses/Problem.yaml
