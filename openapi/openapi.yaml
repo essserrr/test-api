@@ -27,3 +27,8 @@ paths:
     $ref: "paths/user_{user_username}.yaml"
   "/users/{user_id}":
     $ref: "paths/user_{user_id}.yaml"
+
+  "/authors?offset={offset}&limit={limit}":
+    $ref: "paths/author.yaml"
+  "/authors/{author_id}":
+    $ref: "paths/author_{author_id}.yaml"

@@ -1,0 +1,6 @@
+oneOf:
+  - type: string
+
+  - type: null
+examples:
+  - Author description

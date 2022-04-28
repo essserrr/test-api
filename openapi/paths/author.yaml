@@ -1,0 +1,25 @@
+get:
+  tags:
+    - Author
+  summary: Get all authors
+  operationId: getAuthors
+  parameters:
+    - name: offset
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/Offset.yaml
+    - name: limit
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/Limit.yaml
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Author-Paginated.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

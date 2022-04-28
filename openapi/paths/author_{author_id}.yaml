@@ -1,0 +1,103 @@
+get:
+  tags:
+    - Author
+  summary: Get author by author id
+  operationId: getAuthor
+  parameters:
+    - name: author_id
+      in: path
+      description: The author_id that needs to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/Id.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Author.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+post:
+  tags:
+    - Author
+  summary: Add author by author id
+  operationId: getAuthor
+  parameters:
+    - name: author_id
+      in: path
+      description: The author_id that needs to be added
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Author-PATCH.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Author.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+patch:
+  tags:
+    - Author
+  summary: Patch author by author id
+  operationId: patchAuthor
+  parameters:
+    - name: author_id
+      in: path
+      description: The author_id that needs to be patched
+      required: true
+      schema:
+        $ref: ../components/schemas/Id.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Author-PATCH.yaml
+    description: Updated user object
+    required: true
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Author.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - Author
+  summary: Delete author by author id
+  operationId: deleteAuthor
+  parameters:
+    - name: author_id
+      in: path
+      description: The author_id that needs to be removed
+      required: true
+      schema:
+        $ref: ../components/schemas/Id.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

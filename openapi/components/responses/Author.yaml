@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ./Response.yaml
+  - type: object
+    description: Author response
+    properties:
+      data:
+        $ref: ../schemas/Author.yaml
