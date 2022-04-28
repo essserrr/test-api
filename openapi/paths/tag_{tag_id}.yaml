@@ -1,6 +1,6 @@
 get:
   tags:
-    - Tags
+    - Tag
   summary: Get tag by tag id
   operationId: getTag
   parameters:
@@ -23,7 +23,7 @@ get:
 
 patch:
   tags:
-    - Tags
+    - Tag
   summary: Patch tag by tag id
   operationId: patchTag
   parameters:
@@ -53,7 +53,7 @@ patch:
 
 delete:
   tags:
-    - Tags
+    - Tag
   summary: Delete tag by tag id
   operationId: deleteTag
   parameters:

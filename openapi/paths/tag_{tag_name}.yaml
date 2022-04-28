@@ -1,6 +1,6 @@
 post:
   tags:
-    - Tags
+    - Tag
   summary: Add tag by tag name
   operationId: getTag
   parameters:

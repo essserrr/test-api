@@ -1,0 +1,15 @@
+type: object
+title: User
+properties:
+  name:
+    type: string
+    examples:
+      - User name
+  secondName:
+    type: string
+    examples:
+      - User secondName
+  avatar:
+    oneOf:
+      - type: string
+      - type: null

@@ -10,11 +10,11 @@ servers:
   - url: "https://localhost:8000/"
 paths:
   "/tags?offset={offset}&limit={limit}":
-    $ref: "paths/tags.yaml"
+    $ref: "paths/tag.yaml"
   "/tags/{tag_name}":
-    $ref: "paths/tags_{tag_name}.yaml"
+    $ref: "paths/tag_{tag_name}.yaml"
   "/tags/{tag_id}":
-    $ref: "paths/tags_{tag_id}.yaml"
+    $ref: "paths/tag_{tag_id}.yaml"
 
   "/categories?offset={offset}&limit={limit}":
     $ref: "paths/category.yaml"
@@ -22,3 +22,8 @@ paths:
     $ref: "paths/category_{category_name}.yaml"
   "/categories/{category_id}":
     $ref: "paths/category_{category_id}.yaml"
+
+  "/users/{user_username}":
+    $ref: "paths/user_{user_username}.yaml"
+  "/users/{user_id}":
+    $ref: "paths/user_{user_id}.yaml"

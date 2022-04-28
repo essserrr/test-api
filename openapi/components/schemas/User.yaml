@@ -1,0 +1,26 @@
+type: object
+title: User
+properties:
+  uid:
+    $ref: ./Id.yaml
+  name:
+    type: string
+    examples:
+      - User name
+  secondName:
+    type: string
+    examples:
+      - User secondName
+  avatar:
+    oneOf:
+      - type: string
+      - type: null
+  username:
+    type: string
+    examples:
+      - User username
+  createdAt:
+    type: integer
+    minimum: 0
+  isAdmin:
+    type: boolean

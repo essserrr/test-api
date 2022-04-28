@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ./Response.yaml
+  - type: object
+    description: User response
+    properties:
+      data:
+        $ref: ../schemas/User.yaml

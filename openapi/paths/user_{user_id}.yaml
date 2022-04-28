@@ -1,0 +1,45 @@
+get:
+  tags:
+    - User
+  summary: Get user by user id
+  operationId: getUser
+  parameters:
+    - name: user_id
+      in: path
+      description: The user_id that needs to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/Id.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/User.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - User
+  summary: Delete user by user id
+  operationId: deleteUser
+  parameters:
+    - name: user_id
+      in: path
+      description: The user_id that needs to be removed
+      required: true
+      schema:
+        $ref: ../components/schemas/Id.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

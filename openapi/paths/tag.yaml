@@ -1,6 +1,6 @@
 get:
   tags:
-    - Tags
+    - Tag
   summary: Get all tags
   operationId: getTags
   parameters:
