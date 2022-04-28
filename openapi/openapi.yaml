@@ -45,3 +45,5 @@ paths:
 
   "/news/{user_id}":
     $ref: "paths/news_{user_id}.yaml"
+  "/news/{news_id}":
+    $ref: "paths/news_{news_id}.yaml"

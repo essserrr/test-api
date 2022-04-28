@@ -1,0 +1,73 @@
+get:
+  tags:
+    - News
+  summary: Get news by news id
+  operationId: getNews
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that needs to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/News.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - News
+  summary: Delete news by news id
+  operationId: getNews
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that needs to be deleted
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+put:
+  tags:
+    - News
+  summary: Put news by news id
+  operationId: putNews
+  parameters:
+    - name: user_id
+      in: path
+      description: The news_id that needs to be put
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/News-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/News.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
