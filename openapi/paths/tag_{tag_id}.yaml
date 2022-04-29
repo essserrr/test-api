@@ -73,3 +73,26 @@ delete:
             $ref: ../components/responses/Message-Response.yaml
     "400":
       $ref: ../components/responses/Error.yaml
+
+post:
+  tags:
+    - Tag
+  summary: Add tag by tag name
+  operationId: addTag
+  parameters:
+    - name: tag_id
+      in: path
+      description: The tag_name that needs to be added
+      required: true
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Tag.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

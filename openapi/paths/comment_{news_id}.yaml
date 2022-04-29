@@ -57,3 +57,26 @@ post:
             $ref: ../components/responses/Comment.yaml
     "400":
       $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - Comment
+  summary: Delete comment with comment_id
+  operationId: deleteComment
+  parameters:
+    - name: news_id
+      in: path
+      description: The comment_id that needs to be removed
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

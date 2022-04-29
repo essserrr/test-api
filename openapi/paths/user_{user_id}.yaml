@@ -43,3 +43,31 @@ delete:
             $ref: ../components/responses/Message-Response.yaml
     "400":
       $ref: ../components/responses/Error.yaml
+
+post:
+  tags:
+    - User
+  summary: Add user by user username
+  operationId: signUp
+  parameters:
+    - name: user_id
+      in: path
+      description: The user_username that needs to be added
+      required: true
+      schema:
+        type: string
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/User-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/User.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

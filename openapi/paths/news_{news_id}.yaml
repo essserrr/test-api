@@ -71,3 +71,31 @@ put:
             $ref: ../components/responses/News.yaml
     "400":
       $ref: ../components/responses/Error.yaml
+
+post:
+  tags:
+    - News
+  summary: Add news by user id
+  operationId: addNews
+  parameters:
+    - name: news_id
+      in: path
+      description: The user_id that adds news
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/News-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/News.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
