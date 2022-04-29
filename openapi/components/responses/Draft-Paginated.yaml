@@ -1,7 +1,7 @@
 allOf:
   - $ref: ./Response-Paginated.yaml
   - type: object
-    description: News list response
+    description: Draft list response
     properties:
       data:
         properties:

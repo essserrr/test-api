@@ -1,0 +1,22 @@
+post:
+  tags:
+    - Draft
+  summary: Publish draft by news id
+  operationId: publishDraft
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that adds news
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

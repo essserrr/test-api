@@ -40,3 +40,10 @@ paths:
     $ref: "paths/news.yaml"
   "/news/{news_id}":
     $ref: "paths/news_{news_id}.yaml"
+
+  "/drafts":
+    $ref: "paths/draft.yaml"
+  "/drafts/{news_id}":
+    $ref: "paths/draft_{news_id}.yaml"
+  "/drafts/{news_id}/publish":
+    $ref: "paths/draft_{news_id}_publish.yaml"

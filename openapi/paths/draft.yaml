@@ -1,0 +1,27 @@
+get:
+  tags:
+    - Draft
+  summary: Get all drafts
+  operationId: getAllDrafts
+  parameters:
+    - name: offset
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Offset.yaml
+
+    - name: limit
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Limit.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Draft-Paginated.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml

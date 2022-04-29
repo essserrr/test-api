@@ -1,0 +1,101 @@
+get:
+  tags:
+    - Draft
+  summary: Get draft by news id
+  operationId: getDraft
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that needs to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Draft.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+delete:
+  tags:
+    - Draft
+  summary: Delete draft by news id
+  operationId: deleteDraft
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that needs to be deleted
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Message-Response.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+put:
+  tags:
+    - Draft
+  summary: Put draft by news id
+  operationId: putDraft
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id that needs to be put
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/News-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Draft.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
+post:
+  tags:
+    - Draft
+  summary: Add draft by user id
+  operationId: addDraft
+  parameters:
+    - name: news_id
+      in: path
+      description: The user_id that adds news
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/News-POST.yaml
+
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Draft.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
