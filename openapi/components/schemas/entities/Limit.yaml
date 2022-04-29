@@ -1,4 +1,4 @@
-oneOf:
-  - type: integer
-    minimum: 0
-  - type: null
+type:
+  - integer
+  - null
+minimum: 0

@@ -13,9 +13,9 @@ properties:
     examples:
       - User secondName
   avatar:
-    oneOf:
-      - type: string
-      - type: null
+    type:
+      - string
+      - null
   username:
     type: string
     examples:

@@ -2,21 +2,24 @@ openapi: 3.1.0
 info:
   version: 1.0.1
   title: News blog
+  license:
+    name: MIT License
+    url: https://choosealicense.com/licenses/mit/
   contact:
     url: "https://github.com/essserrr/news-blog"
   description:
     $ref: ./info-description.md
 servers:
-  - url: "https://localhost:8000/"
+  - url: "https://localhost:8000"
 paths:
-  "/tags?offset={offset}&limit={limit}":
+  "/tags":
     $ref: "paths/tag.yaml"
   "/tags/{tag_name}":
     $ref: "paths/tag_{tag_name}.yaml"
   "/tags/{tag_id}":
     $ref: "paths/tag_{tag_id}.yaml"
 
-  "/categories?offset={offset}&limit={limit}":
+  "/categories":
     $ref: "paths/category.yaml"
   "/categories/{category_name}":
     $ref: "paths/category_{category_name}.yaml"
@@ -28,7 +31,7 @@ paths:
   "/users/{user_id}":
     $ref: "paths/user_{user_id}.yaml"
 
-  "/authors?offset={offset}&limit={limit}":
+  "/authors":
     $ref: "paths/author.yaml"
   "/authors/{author_id}":
     $ref: "paths/author_{author_id}.yaml"
@@ -36,14 +39,12 @@ paths:
   "/auth/{user_username}":
     $ref: "paths/auth_{user_username}.yaml"
 
-  "/comments/{news_id}?offset={offset}&limit={limit}":
-    $ref: "paths/comment.yaml"
   "/comments/{news_id}":
     $ref: "paths/comment_{news_id}.yaml"
   "/comments/{comment_id}":
     $ref: "paths/comment_{comment_id}.yaml"
 
-  "/news?offset={offset}&limit={limit}":
+  "/news":
     $ref: "paths/news.yaml"
   "/news/{user_id}":
     $ref: "paths/news_{user_id}.yaml"

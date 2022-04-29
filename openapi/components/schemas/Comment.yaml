@@ -4,9 +4,9 @@ properties:
   id:
     $ref: ./entities/BigintId.yaml
   uid:
-    oneOf:
+    type:
       - $ref: ./entities/BigintId.yaml
-      - type: null
+      - null
     description: user id
   nid:
     $ref: ./entities/BigintId.yaml

@@ -2,9 +2,9 @@ type: object
 title: Comment
 properties:
   uid:
-    oneOf:
+    type:
       - $ref: ./entities/BigintId.yaml
-      - type: null
+      - null
     description: user id
   message:
     $ref: ./entities/Comment-Message.yaml

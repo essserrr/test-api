@@ -25,7 +25,7 @@ delete:
   tags:
     - News
   summary: Delete news by news id
-  operationId: getNews
+  operationId: deleteNews
   parameters:
     - name: news_id
       in: path
@@ -50,7 +50,7 @@ put:
   summary: Put news by news id
   operationId: putNews
   parameters:
-    - name: user_id
+    - name: news_id
       in: path
       description: The news_id that needs to be put
       required: true

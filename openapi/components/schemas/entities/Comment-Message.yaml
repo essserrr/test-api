@@ -1,6 +1,5 @@
-oneOf:
-  - type: string
-
-  - type: null
+type:
+  - string
+  - null
 examples:
   - Comment message

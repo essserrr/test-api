@@ -1,3 +1,35 @@
+get:
+  tags:
+    - Comment
+  summary: Get all comments for news with news_id
+  operationId: getAllComments
+  parameters:
+    - name: news_id
+      in: path
+      description: The news_id which comments need to be fetched
+      required: true
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+    - name: offset
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Offset.yaml
+    - name: limit
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Limit.yaml
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/Comment-Paginated.yaml
+    "400":
+      $ref: ../components/responses/Error.yaml
+
 post:
   tags:
     - Comment
