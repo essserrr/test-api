@@ -36,5 +36,4 @@ properties:
     $ref: "./NewsAuthor.yaml"
 
   createdAt:
-    type: integer
-    minimum: 0
+    $ref: ./entities/Timestamp.yaml

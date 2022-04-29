@@ -9,11 +9,113 @@ get:
       required: false
       schema:
         $ref: ../components/schemas/entities/Offset.yaml
+
     - name: limit
       in: query
       required: false
       schema:
         $ref: ../components/schemas/entities/Limit.yaml
+
+    - name: created_at
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Timestamp.yaml
+
+    - name: created_at__lt
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Timestamp.yaml
+
+    - name: created_at__gt
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Timestamp.yaml
+
+    - name: author
+      in: query
+      required: false
+      schema:
+        type: string
+
+    - name: category
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Id.yaml
+
+    - name: tag
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Id.yaml
+
+    - name: tag_in
+      in: query
+      required: false
+      schema:
+        type: array
+        items:
+          $ref: ../components/schemas/entities/Id.yaml
+
+    - name: tag_all
+      in: query
+      required: false
+      schema:
+        type: array
+        items:
+          $ref: ../components/schemas/entities/Id.yaml
+
+    - name: title
+      in: query
+      required: false
+      schema:
+        type: string
+
+    - name: content
+      in: query
+      required: false
+      schema:
+        type: string
+
+    - name: search
+      in: query
+      required: false
+      schema:
+        type: string
+
+    - name: author_uid
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/BigintId.yaml
+
+    - name: sort_date
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Sorting.yaml
+
+    - name: sort_author
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Sorting.yaml
+
+    - name: sort_category
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Sorting.yaml
+
+    - name: sort_photo
+      in: query
+      required: false
+      schema:
+        $ref: ../components/schemas/entities/Sorting.yaml
+
   responses:
     "200":
       description: OK
